@@ -4,7 +4,6 @@ import jsonData from "./data.json";
 
 import { Weights } from "./components/Weights";
 
-
 function App() {
   const [data] = useState(jsonData);
 
@@ -13,7 +12,7 @@ function App() {
       <div className="md:flex items-center justify-center shadow-xl rounded-[35px]">
         <div className="card-top bg-gradient-to-b from-[#5f3ffc] to-[#3930ed] h-[350px] md:h-[450px] md:w-[330px] rounded rounded-b-[35px] md:rounded-[35px] ">
           <div className="flex flex-col items-center">
-            <h1 className="m-5 font-bold text-lg text-[#c9b9fd]">
+            <h1 className="m-5  font-semibold text-lg text-[#c9b9fd]">
               Your Result
             </h1>
             <div className="circle rounded-full bg-gradient-to-tr from-[#6247eb] to-[#2a239e] w-36 h-36 md:w-44 md:h-44 md:m-5 flex justify-center items-center">
@@ -41,7 +40,8 @@ function App() {
               key={item.category}
               category={item.category}
               score={item.score}
-              icon={item.icon}/>
+              icon={item.icon}
+            />
           ))}
 
           <div className="button mt-5 px-5 md:px-0">
