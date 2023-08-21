@@ -1,7 +1,6 @@
 interface WeightsProps {
   category: string;
   score: number;
-  icon: string;
 }
 
 const textCategoryColorMappings: { [key: string]: string } = {
@@ -18,15 +17,23 @@ const textBackgroundColorMappings: { [key: string]: string } = {
     Visual: "bg-[#f3f3fd]",
   };
 
-export const Weights = ({ icon, category, score }: WeightsProps) => {
+const iconMapping: { [key: string]: string } = {
+    Reaction: "./src/assets/images/icon-reaction.svg",
+    Memory: "./src/assets/images/icon-memory.svg",
+    Verbal: "./src/assets/images/icon-verbal.svg",
+    Visual: "./src/assets/images/icon-visual.svg"
+}
+
+export const Weights = ({ category, score }: WeightsProps) => {
   const textCategoryColor = textCategoryColorMappings[category] || "text-gray-500";
   const textBackgroundColor = textBackgroundColorMappings[category] || "text-gray-500";
+  const Icons = iconMapping[category];
 
   return (
     <div className="weights">
       <div className={`reaction p-5 flex justify-between items-center ${textBackgroundColor} gap-2 h-14 mx-7 md:mx-0 mt-5 rounded-xl`}>
         <div className={`flex gap-2 ${textCategoryColor}`}>
-          <img src={icon} alt="image-icon" />
+          <img src={Icons} alt="image-icon" />
           <span className="font-semibold">{category}</span>
         </div>
         <div>

@@ -15,4 +15,4 @@
 ## Author
 
 - Website - [Vanderson Tavares](https://vandersontavares.netlify.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/VandersonTavares)
+- Frontend Mentor - [@VandersonTavares](https://www.frontendmentor.io/profile/VandersonTavares)

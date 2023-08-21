@@ -40,7 +40,6 @@ function App() {
               key={item.category}
               category={item.category}
               score={item.score}
-              icon={item.icon}
             />
           ))}
 
